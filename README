@@ -1,0 +1,16 @@
+BitTorrent
+
+This is a peer-to-peer application for downloading files from different sources.
+The system consists in a server and multiple clients(peers). The server contains
+all the information about the existing files in the system and about the peers 
+that own these files. He is waiting for connections and for each client will
+start a new thread for communication. The clients can upload or download files
+from the system but they are also waiting for connections from other peers for
+transferring pieces of files. All the transfer are made in parallel from
+different peers.
+The application can be run using the ant build file.
+Example of running:
+	- ant run-server
+	- ant run-publish1
+	- ant run-publish2
+	- ant run-retrieve1
